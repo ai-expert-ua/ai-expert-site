@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>AI Expert · AI-агенти та автоматизація для бізнесу</title>
-<meta name="description" content="AI-агенти та автоматизація для готелів, ресторанів, клінік, салонів, фітнесу, нерухомості, автосервісів і оренди. Будуємо систему, якою ви володієте: бронювання, гості, замовлення, CRM, звітність — працює 24/7.">
+<meta name="description" content="AI-агенти та автоматизація бізнес-процесів для малого й середнього бізнесу: заявки, запис, CRM і звіти 24/7. Безкоштовний аудит у Telegram.">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231A1208'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23FF9F0A'/%3E%3C/svg%3E">
 <meta property="og:title" content="AI Expert · AI-агенти та автоматизація для бізнесу">
@@ -14,6 +14,41 @@
 <meta property="og:locale" content="uk_UA">
 <meta property="og:site_name" content="AI Expert">
 <link rel="canonical" href="https://ai-expert.com.ua/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ai-expert.com.ua/#website",
+      "url": "https://ai-expert.com.ua/",
+      "name": "AI Expert",
+      "inLanguage": "uk"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ai-expert.com.ua/#service",
+      "name": "AI Expert",
+      "url": "https://ai-expert.com.ua/",
+      "description": "AI-агенти та автоматизація бізнес-процесів для малого й середнього бізнесу: заявки, запис, CRM і звіти 24/7.",
+      "slogan": "AI-агенти та автоматизація для бізнесу",
+      "sameAs": ["https://t.me/AI_EXPERT_UA"],
+      "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "url": "https://t.me/AI_EXPERT_UA", "availableLanguage": ["uk"]},
+      "founder": {"@type": "Person", "name": "Юрій Танасійчук", "jobTitle": "AI Спеціаліст", "sameAs": ["https://t.me/AI_EXPERT_UA"]},
+      "knowsAbout": ["AI-агенти", "Автоматизація бізнес-процесів", "Архітектура бізнес-процесів", "AI-відео", "Telegram-боти", "CRM", "Make", "n8n"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Тарифи",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Старт", "description": "Перша автоматизація під ключ: 1 AI-агент або Telegram-бот, до 3 автоматизацій, 14 днів підтримки."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Бізнес", "description": "AI-агенти на 2–3 канали, CRM на Airtable або Notion, до 10 автоматизацій і щоденні звіти, 30 днів підтримки."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Преміум", "description": "Повна збірка: агенти на всі канали, дашборд Mission Control, інтеграції, щомісячний супровід."}}
+        ]
+      }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -99,7 +134,7 @@ footer .logo-tag{color:var(--muted)}
 .btn-ghost{border-color:var(--line2);color:var(--ivory)}
 .btn-ghost:hover{border-color:var(--amber);color:var(--atx)}
 .btn-sm{padding:9px 18px;font-size:14px}
-.tg-ic{width:16px;height:16px;flex:none}
+.tg-ic{width:20px;height:20px;flex:none;margin-block:-2px}   /* coloured Telegram logo on the CTA buttons */
 @media(max-width:860px){.nav-links{display:none}}
 
 /* ===== hero ===== */
@@ -110,14 +145,17 @@ footer .logo-tag{color:var(--muted)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hero-grid > *{min-width:0}
 @media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
-.hero h1{font-size:clamp(34px,5.4vw,76px);margin:16px 0 28px}
+.hero h1{font-size:clamp(34px,5.4vw,76px);margin:0 0 28px}
+/* the small keyword line is part of the h1 (so search engines read what the site is about) but keeps the eyebrow look */
+.hero h1 .eyebrow{font-weight:400;line-height:1.5;margin-bottom:34px;-webkit-text-stroke:0;text-shadow:none}
+@media(max-width:960px){.hero h1 .eyebrow{margin-bottom:18px}}
 /* wide screens: the headline runs across both columns as the one dominant element; lead + CTAs left, panel right below it */
 @media(min-width:961px){
-  .hero-grid{grid-template-columns:1.1fr .9fr;grid-template-rows:auto auto auto auto auto 1fr;column-gap:56px;row-gap:0;align-items:start}
+  .hero-grid{grid-template-columns:1.1fr .9fr;grid-template-rows:auto auto auto auto 1fr;column-gap:56px;row-gap:0;align-items:start}
   .hero-grid > div:first-child{display:contents}
   .hero-grid > div:first-child > *{min-width:0;grid-column:1}
-  .hero-grid > div:first-child > .eyebrow,.hero-grid > div:first-child > h1{grid-column:1 / -1}
-  .hero-grid > div:last-child{grid-column:2;grid-row:3 / 7;align-self:start}
+  .hero-grid > div:first-child > h1{grid-column:1 / -1}
+  .hero-grid > div:last-child{grid-column:2;grid-row:2 / 6;align-self:start}
 }
 .hero h1 .accent{color:var(--atx)}
 .hero p.lead{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:32px}
@@ -313,6 +351,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 36px;background:var(--bg2
 .f-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:10px;transition:color .2s}
 .f-col a:hover{color:var(--atx)}
 .f-bot{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--dim)}
+.f-bot span.f-dom{color:inherit;white-space:nowrap}   /* the address stays plain text, not brand amber */
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -547,7 +586,11 @@ input[type=range].sl-r::-moz-range-progress{background:#FF9F0A;height:8px;border
 .avatar{position:relative;width:100%;max-width:370px;aspect-ratio:1;border-radius:50%;background:#FF9F0A;padding:7px;box-shadow:0 24px 60px rgba(255,138,0,.38),0 0 0 1px rgba(160,70,0,.25)}
 .avatar img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;background:#fff}
 .avatar::after{content:"";position:absolute;inset:-12px;border:1.5px dashed rgba(255,138,0,.55);border-radius:50%;pointer-events:none}
-.about-txt h2{font-size:clamp(24px,3vw,36px);margin:6px 0 18px}
+/* the second line "Будую AI-системи замість рутини." always fits on one row: size follows the text column width */
+.about-txt{container-type:inline-size}
+.about-txt h2{font-size:clamp(13px,4.4cqi,36px);margin:6px 0 18px}
+.about-txt h2 .nw{white-space:nowrap}
+@container (max-width:295px){.about-txt h2 .nw{white-space:normal}}   /* very narrow phones: wrap rather than overflow */
 .about-txt p{color:var(--muted);max-width:620px;margin-bottom:22px}
 /* diploma under the photo: two A4 pages side by side, tap opens the full page */
 .about-side{display:flex;flex-direction:column;align-items:center;gap:26px}
@@ -655,7 +698,6 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
   mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;
   animation:chipSpin 2.4s linear infinite}
 .svc-chip.pulse[data-svc="1"]::after,.svc-chip.pulse[data-svc="1"]::before{animation-delay:-.8s}
-.svc-chip.pulse[data-svc="2"]::after,.svc-chip.pulse[data-svc="2"]::before{animation-delay:-1.6s}
 @keyframes chipSpin{to{--ang:360deg}}
 @keyframes chipGlow{0%,100%{opacity:0}50%{opacity:1}}
 @media (prefers-reduced-motion:reduce){.svc-chip.pulse::before{display:none}}
@@ -690,7 +732,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
       <a href="#faq">FAQ</a>
     </div>
     <a class="btn btn-amber btn-sm" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">
-      <svg class="tg-ic" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M11.94 0A12 12 0 1 0 24 12 12 12 0 0 0 11.94 0Zm5.87 8.16-1.97 9.3c-.15.66-.54.82-1.1.51l-3-2.22-1.45 1.4a.76.76 0 0 1-.6.29l.21-3.06 5.56-5.02c.24-.21-.05-.33-.37-.12l-6.87 4.33-2.96-.93c-.64-.2-.66-.64.14-.95l11.57-4.46c.53-.2 1 .13.84.93Z"/></svg>
+      <svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg>
       Написати
     </a>
   </div>
@@ -700,9 +742,8 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
 <div class="svc-strip">
   <div class="wrap svc-in">
     <span class="svc-lbl">Мої напрямки</span>
-    <button type="button" class="svc-chip pulse" data-svc="0" aria-haspopup="dialog" aria-expanded="false"><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></i>AI-автоматизація</button>
-    <button type="button" class="svc-chip pulse" data-svc="1" aria-haspopup="dialog" aria-expanded="false"><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg></i>Архітектура бізнес-процесів</button>
-    <button type="button" class="svc-chip pulse" data-svc="2" aria-haspopup="dialog" aria-expanded="false"><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></i>AI-відео: генерація та монтаж</button>
+    <button type="button" class="svc-chip pulse" data-svc="0" aria-haspopup="dialog" aria-expanded="false"><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></i>AI-автоматизація бізнес-процесів</button>
+    <button type="button" class="svc-chip pulse" data-svc="1" aria-haspopup="dialog" aria-expanded="false"><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></i>AI-відео: генерація та монтаж</button>
   </div>
 </div>
 <!-- FEATURE:services-strip END -->
@@ -712,12 +753,11 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow rv">AI-агенти · Автоматизація · Власна система</div>
-      <h1 class="rv d1">Бізнес росте.<br>Команда&nbsp;— <span class="accent plain">не встигає.</span></h1>
+      <h1 class="rv d1"><span class="eyebrow">AI-агенти та автоматизація бізнес-процесів</span> Бізнес росте.<br>Команда&nbsp;— <span class="accent plain">не встигає.</span></h1>
       <p class="lead rv d2">AI-агенти, що знімають рутину з&nbsp;вашої команди&nbsp;— і <b>система, якою володієте ви</b>. Бронювання, замовлення, заявки, звітність&nbsp;— операційний шар, що працює <b>24/7 без вихідних і&nbsp;лікарняних</b>.</p>
       <div class="hero-ctas rv d3">
         <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">
-          <svg class="tg-ic" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M11.94 0A12 12 0 1 0 24 12 12 12 0 0 0 11.94 0Zm5.87 8.16-1.97 9.3c-.15.66-.54.82-1.1.51l-3-2.22-1.45 1.4a.76.76 0 0 1-.6.29l.21-3.06 5.56-5.02c.24-.21-.05-.33-.37-.12l-6.87 4.33-2.96-.93c-.64-.2-.66-.64.14-.95l11.57-4.46c.53-.2 1 .13.84.93Z"/></svg>
+          <svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg>
           Безкоштовний аудит
         </a>
         <a class="btn btn-ghost" href="#build">Дивитися пайплайн ↓</a>
@@ -902,7 +942,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
           <div><b><span id="oY">0</span>&nbsp;грн</b><span>економія на рік</span></div>
         </div>
         <div class="co-note">Це приблизно <b id="oF">0</b> повної ставки, яку ви більше не оплачуєте за рутину. Розрахунок орієнтовний і&nbsp;залежить від ваших процесів.</div>
-        <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M11.94 0A12 12 0 1 0 24 12 12 12 0 0 0 11.94 0Zm5.87 8.16-1.97 9.3c-.15.66-.54.82-1.1.51l-3-2.22-1.45 1.4a.76.76 0 0 1-.6.29l.21-3.06 5.56-5.02c.24-.21-.05-.33-.37-.12l-6.87 4.33-2.96-.93c-.64-.2-.66-.64.14-.95l11.57-4.46c.53-.2 1 .13.84.93Z"/></svg> Порахувати точно&nbsp;— безкоштовний аудит</a>
+        <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg> Порахувати точно&nbsp;— безкоштовний аудит</a>
       </div>
     </div>
   </div>
@@ -995,10 +1035,10 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
     </div>
     <div class="about-txt rv d1">
       <div class="eyebrow">Хто за цим стоїть</div>
-      <h2>Привіт, я&nbsp;Юрій. Будую AI-системи замість рутини.</h2>
-      <p>Я&nbsp;автоматизую бізнес-процеси та створюю AI-агентів для малого й&nbsp;середнього бізнесу. Спершу розбираюсь, де ви втрачаєте час і&nbsp;гроші,&nbsp;— і&nbsp;лише потім обираю інструменти. Система, яку я&nbsp;збираю, лишається вашою.</p>
-      <div class="chips"><span class="chip">AI-автоматизація</span><span class="chip">Архітектура бізнес-процесів</span><span class="chip">AI-відео: генерація та монтаж</span></div>
-      <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M11.94 0A12 12 0 1 0 24 12 12 12 0 0 0 11.94 0Zm5.87 8.16-1.97 9.3c-.15.66-.54.82-1.1.51l-3-2.22-1.45 1.4a.76.76 0 0 1-.6.29l.21-3.06 5.56-5.02c.24-.21-.05-.33-.37-.12l-6.87 4.33-2.96-.93c-.64-.2-.66-.64.14-.95l11.57-4.46c.53-.2 1 .13.84.93Z"/></svg> Написати мені в&nbsp;Telegram</a>
+      <h2>Привіт, я&nbsp;Юрій.<br><span class="nw">Будую AI-системи замість рутини.</span></h2>
+      <p>Я&nbsp;автоматизую бізнес-процеси та створюю AI-агентів для малого й&nbsp;середнього бізнесу. Фінансова освіта допомагає бачити бізнес через цифри: спершу рахую, де ви втрачаєте гроші, і&nbsp;лише потім автоматизую. Система, яку я&nbsp;збираю, лишається вашою.</p>
+      <div class="chips"><span class="chip">AI-автоматизація бізнес-процесів</span><span class="chip">AI-відео: генерація та монтаж</span></div>
+      <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg> Написати мені в&nbsp;Telegram</a>
     </div>
   </div>
   <dialog class="cert-dlg" id="certDlg" aria-label="Диплом «AI Спеціаліст»">
@@ -1015,7 +1055,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
     <p class="rv d2">Напишіть у&nbsp;Telegram&nbsp;— за 5&nbsp;хвилин отримаєте першу відповідь, за 2–3&nbsp;дні&nbsp;— безкоштовний аудит вашої операційки з&nbsp;конкретним планом.</p>
     <div class="rv d3">
       <a class="btn btn-amber" style="padding:16px 34px;font-size:16px" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">
-        <svg class="tg-ic" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M11.94 0A12 12 0 1 0 24 12 12 12 0 0 0 11.94 0Zm5.87 8.16-1.97 9.3c-.15.66-.54.82-1.1.51l-3-2.22-1.45 1.4a.76.76 0 0 1-.6.29l.21-3.06 5.56-5.02c.24-.21-.05-.33-.37-.12l-6.87 4.33-2.96-.93c-.64-.2-.66-.64.14-.95l11.57-4.46c.53-.2 1 .13.84.93Z"/></svg>
+        <svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240" style="width:22px;height:22px"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg>
         <span>Написати <span translate="no">@AI_EXPERT_UA</span></span>
       </a>
       <span class="hero-note">Без презентацій на годину. <span>Розмова про вашу операційку.</span></span>
@@ -1052,7 +1092,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
       </div>
     </div>
     <div class="f-bot">
-      <span>© 2026 <span translate="no">AI Expert</span> · Україна</span>
+      <span>© 2026 <span translate="no">AI Expert</span> · <span class="f-dom" translate="no">ai-expert.com.ua</span> · Україна. Усі&nbsp;права&nbsp;захищено.</span>
       <span>Працює у&nbsp;вашому стеку&nbsp;— ключі у&nbsp;вас.</span>
     </div>
   </div>
@@ -1130,7 +1170,7 @@ if(opsEl){
   opsEl.addEventListener('mouseenter', ()=>{ opsHover = true; });
   opsEl.addEventListener('mouseleave', ()=>{ opsHover = false; });
 }
-if(!reduced){ setInterval(()=>{ if(opsVisible && !opsHover && !document.hidden) addLog(); }, 2200); }
+if(!reduced){ setInterval(()=>{ if(opsVisible && !opsHover && !document.hidden) addLog(); }, 1600); }   // a new line every 1.6 s (was 2.2 s, then 1.76 s)
 
 // ===== marquee pause =====
 const marqToggle = document.getElementById('marqToggle');
@@ -1234,7 +1274,7 @@ const circuitPath = document.getElementById('circuitPath');
 const loopMover2 = loopMover.cloneNode(true);
 loopMover2.id = 'loopMover2';
 loopMover.parentNode.appendChild(loopMover2);
-// a third client walks the whole way: Marketing -> Retention -> loop -> Sales, then starts again from Marketing
+// a third client alternates: one lap Marketing -> Retention -> loop -> Sales -> Retention, then a plain Marketing -> Retention walk
 const fullPath = document.getElementById('fullPath');
 const loopMover3 = loopMover.cloneNode(true);
 loopMover3.id = 'loopMover3';
@@ -1263,8 +1303,8 @@ function drawLoop(){
   moverPath.setAttribute('d', 'M'+mx+' '+rowY+' L'+x1+' '+rowY);
   // client 2 circles for ever: Sales -> ... -> Retention along the cards, round the loop, back up to Sales
   circuitPath.setAttribute('d', 'M'+x2+' '+rowY+' L'+x1+' '+rowY+' L'+x1+' '+top+' C '+x1+' '+bot+', '+x2+' '+bot+', '+x2+' '+endY+' L'+x2+' '+rowY);
-  // client 3: Marketing -> Retention along the cards, round the loop, down into Sales; then again from Marketing
-  fullPath.setAttribute('d', 'M'+mx+' '+rowY+' L'+x1+' '+rowY+' L'+x1+' '+top+' C '+x1+' '+bot+', '+x2+' '+bot+', '+x2+' '+endY+' L'+x2+' '+rowY);
+  // client 3, long lap: Marketing -> Retention, round the loop into Sales, along the cards to Retention again
+  fullPath.setAttribute('d', 'M'+mx+' '+rowY+' L'+x1+' '+rowY+' L'+x1+' '+top+' C '+x1+' '+bot+', '+x2+' '+bot+', '+x2+' '+endY+' L'+x2+' '+rowY+' L'+x1+' '+rowY);
   // the label sits centred under the lowest point of the curve, where the line runs level, so it is parallel to it
   // and the client icon passes above it without touching
   const L = loopPath.getTotalLength(); let low = loopPath.getPointAtLength(0);
@@ -1307,11 +1347,13 @@ if(!reduced){
       const pt2 = circuitPath.getPointAtLength(((t - t0) / 1000 * 210) % LC);
       loopMover2.style.transform = 'translate(' + pt2.x + 'px,' + pt2.y + 'px)';
       loopMover2.style.visibility = 'visible';
-      // client 3: the full route, fades at both ends, short pause, again; starts half a client-1 cycle later
+      // client 3: the long lap, fade out at Retention, pause; then the short walk Marketing -> Retention, pause; again.
+      // Starts half a client-1 cycle later so it does not set off together with client 1
       const LF = fullPath.getTotalLength();
-      const travel3 = LF / 210 * 1000, cycle3 = travel3 + 900;
-      const u3 = (t - t0 + cycle3 - cycle / 2) % cycle3;
-      const pt3 = fullPath.getPointAtLength(LF * Math.min(u3 / travel3, 1));
+      const travelA = LF / 210 * 1000, cycleA = travelA + 900, cycle3 = cycleA + cycle;
+      let u3 = (t - t0 + cycle3 - cycle / 2) % cycle3, path3 = fullPath, len3 = LF, travel3 = travelA;
+      if(u3 >= cycleA){ u3 -= cycleA; path3 = moverPath; len3 = L; travel3 = travel; }
+      const pt3 = path3.getPointAtLength(len3 * Math.min(u3 / travel3, 1));
       loopMover3.style.transform = 'translate(' + pt3.x + 'px,' + pt3.y + 'px)';
       loopMover3.style.visibility = 'visible';
       loopMover3.style.opacity = u3 > travel3 ? 0 : Math.min(1, u3 / fade, (travel3 - u3) / fade);
@@ -1577,8 +1619,7 @@ addEventListener('resize', followPop);
 
 // ===== FEATURE:svc-popover START =====
 const SVC = [
-  {t:"AI-автоматизація", d:"Знімаю з\u00A0вашої команди рутину: заявки, бронювання, відповіді клієнтам, нагадування та звіти. AI-агенти й\u00A0сценарії в\u00A0Make чи n8n з’єднують ваші інструменти та працюють 24/7."},
-  {t:"Архітектура бізнес-процесів", d:"Спершу розбираю, як у\u00A0вас рухаються клієнти та гроші\u00A0— від маркетингу до утримання. Складаю карту процесів, знаходжу, де витікають час і\u00A0гроші, і\u00A0даю план: що автоматизувати першим."},
+  {t:"AI-автоматизація бізнес-процесів", d:"Спершу розбираю, як у вас рухаються клієнти та гроші — від маркетингу до утримання, і проєктую архітектуру процесів: де витікають час і гроші, що автоматизувати першим. Потім будую AI-агентів і сценарії в Make чи n8n: заявки, бронювання, відповіді клієнтам, нагадування та звіти — 24/7."},
   {t:"AI-відео: генерація та монтаж", d:"Створюю та монтую відео за допомогою AI: ролики для реклами, соцмереж і\u00A0презентацій продукту\u00A0— без складної зйомки та великого бюджету."}
 ];
 const svcChips = [...document.querySelectorAll('.svc-chip')];
