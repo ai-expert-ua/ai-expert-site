@@ -648,7 +648,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
 
 
 /* ===== FEATURE:tg-popover START ===== */
-.tg-pop{position:fixed;z-index:400;width:min(300px,calc(100vw - 20px));background:#fff;color:#1A1208;border:1px solid rgba(70,35,0,.18);border-radius:var(--r-lg);padding:16px;
+.tg-pop{position:fixed;z-index:2147483647;width:min(300px,calc(100vw - 20px));background:#fff;color:#1A1208;border:1px solid rgba(70,35,0,.18);border-radius:var(--r-lg);padding:16px;
   box-shadow:0 2px 6px rgba(20,17,14,.08),0 24px 54px rgba(20,17,14,.25);opacity:0;transform:translateY(-6px) scale(.97);transform-origin:50% 0;transition:opacity .18s cubic-bezier(.23,1,.32,1),transform .18s cubic-bezier(.23,1,.32,1)}
 .tg-pop.up{transform:translateY(6px) scale(.97)}
 .tg-pop.show,.tg-pop.up.show{opacity:1;transform:none}
@@ -664,6 +664,9 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
 .tp-copy.done{background:#17B35F;border-color:#17B35F;color:#fff}
 .tp-copy.done .i-copy{display:none}
 .tp-copy.done .i-ok{display:block}
+.tp-draft{margin:10px 0 0;padding:10px 12px;background:#F6F6F4;border-radius:var(--r-sm)}
+.tp-draft-l{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--atx-label);margin-bottom:4px}
+.tp-draft-t{font-size:14px;line-height:1.45;color:#1A1208;margin:0}
 .tp-msg{min-height:18px;font-size:14px;color:#0A7A41;margin:8px 2px 10px}
 .tp-msg.err{color:#D93025}
 .tp-open{width:100%;justify-content:center}
@@ -673,7 +676,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
 /* ===== FEATURE:svc-popover START ===== */
 .svc-chip{appearance:none;-webkit-appearance:none;cursor:pointer;font-family:var(--body);color:var(--ivory)}
 .svc-chip.act{border-color:#FF9F0A;background:#FFF3DC;box-shadow:0 8px 18px rgba(255,138,0,.22)}
-.svc-pop{position:fixed;z-index:400;width:min(340px,calc(100vw - 20px));background:#fff;color:#111;border:1px solid rgba(0,0,0,.12);border-radius:var(--r-lg);padding:18px 20px 18px;
+.svc-pop{position:fixed;z-index:2147483647;width:min(340px,calc(100vw - 20px));background:#fff;color:#111;border:1px solid rgba(0,0,0,.12);border-radius:var(--r-lg);padding:18px 20px 18px;
   box-shadow:0 2px 6px rgba(0,0,0,.08),0 24px 54px rgba(0,0,0,.24);opacity:0;transform:translateY(-6px) scale(.97);transform-origin:var(--cx,50%) 0;transition:opacity .18s cubic-bezier(.23,1,.32,1),transform .18s cubic-bezier(.23,1,.32,1)}
 .svc-pop.show{opacity:1;transform:none}
 .svc-pop[hidden]{display:none}
@@ -718,6 +721,14 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
   input[type=range].sl-r::-webkit-slider-thumb:hover{transform:none}
 }
 
+
+/* ===== FEATURE:hero-journey START — «шлях клієнта» у hero (замість панелі Mission Control) ===== */
+.hp{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:0 30px 70px rgba(20,17,14,.12);overflow:hidden}
+.hp-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:13px;letter-spacing:.08em;color:var(--muted)}
+.hp-live{display:flex;align-items:center;gap:8px;color:var(--green)}
+.hp-live i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+.hp-svg{display:block;width:100%;height:auto;padding:8px 6px 4px}
+/* ===== FEATURE:hero-journey END ===== */
 </style>
 </head>
 <body id="top">
@@ -726,7 +737,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
 <div class="progress" id="progress"></div>
 <!-- FEATURE:micro END -->
 
-<div class="topbar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> Безкоштовний аудит вашої операційки&nbsp;— напишіть <a href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">в&nbsp;Telegram</a>, відповідь за 5&nbsp;хвилин</div>
+<div class="topbar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> Безкоштовний аудит вашої операційки&nbsp;— напишіть <a href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу безкоштовний аудит моєї операційки." target="_blank" rel="noopener">в&nbsp;Telegram</a>, відповідь за 5&nbsp;хвилин</div>
 
 <nav>
   <div class="wrap nav-in">
@@ -739,7 +750,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
       <a href="#pricing">Тарифи</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="btn btn-amber btn-sm" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">
+    <a class="btn btn-amber btn-sm" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу обговорити автоматизацію бізнесу." target="_blank" rel="noopener">
       <svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg>
       Написати
     </a>
@@ -764,7 +775,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
       <h1 class="rv d1"><span class="eyebrow">AI-агенти та автоматизація бізнес-процесів</span> Бізнес росте.<br>Команда&nbsp;— <span class="accent plain">не встигає.</span></h1>
       <p class="lead rv d2">AI-агенти, що знімають рутину з&nbsp;вашої команди&nbsp;— і <b>система, якою володієте ви</b>. Бронювання, замовлення, заявки, звітність&nbsp;— операційний шар, що працює <b>24/7 без вихідних і&nbsp;лікарняних</b>.</p>
       <div class="hero-ctas rv d3">
-        <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">
+        <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу безкоштовний аудит моєї операційки." target="_blank" rel="noopener">
           <svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg>
           Безкоштовний аудит
         </a>
@@ -773,17 +784,24 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
       <div class="hero-note rv d4">Не чат-бот. <span>Операційна система.</span> Готелі · Ресторани · Клініки · Салони · Фітнес · Нерухомість · Авто</div>
     </div>
     <div class="rv d2">
-      <div class="ops">
-        <div class="ops-head">
-          <span translate="no">MISSION&nbsp;CONTROL<span class="mc-brand"> · AI EXPERT</span></span>
-          <span class="live" title="Демонстраційні дані"><i></i>ДЕМО</span>
-        </div>
-        <div class="ops-stats">
-          <div class="ops-stat"><div class="v"><em data-count="24">0</em></div><div class="l">агентів у&nbsp;роботі</div></div>
-          <div class="ops-stat"><div class="v"><em data-count="1240">0</em></div><div class="l">задач сьогодні</div></div>
-          <div class="ops-stat"><div class="v"><em data-count="97">0</em>%</div><div class="l">без участі людини</div></div>
-        </div>
-        <div class="ops-log" id="opsLog" aria-hidden="true"></div>
+      <div class="hp" role="img" aria-label="Шлях клієнта: Маркетинг, Продажі, Онбординг, Доставка, Утримання; клієнт повертається в продажі">
+        <div class="hp-head"><span>ШЛЯХ КЛІЄНТА</span><span class="hp-live"><i></i>АВТОМАТИЗОВАНО</span></div>
+        <svg viewBox="0 0 460 372" class="hp-svg" aria-hidden="true">
+          <defs><marker id="hpA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#17B35F"/></marker></defs>
+          <path d="M70 46V316" stroke="#FF9F0A" stroke-width="3" stroke-linecap="round"/>
+          <path d="M70 330V346H336C362 346 372 330 372 308L372 138C372 114 350 106 222 106" fill="none" stroke="#17B35F" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" marker-end="url(#hpA)"/>
+          <g font-family="Unbounded" font-weight="600" font-size="18" fill="#1A1208">
+            <g transform="translate(70 46)"><circle r="13" fill="#fff" stroke="#FF9F0A" stroke-width="4"/><text x="34" y="6">Маркетинг</text></g>
+            <g transform="translate(70 106)"><circle r="13" fill="#fff" stroke="#FF9F0A" stroke-width="4"/><text x="34" y="6">Продажі</text></g>
+            <g transform="translate(70 166)"><circle r="13" fill="#fff" stroke="#FF9F0A" stroke-width="4"/><text x="34" y="6">Онбординг</text></g>
+            <g transform="translate(70 241)"><circle r="13" fill="#fff" stroke="#FF9F0A" stroke-width="4"/><text x="34" y="6">Доставка</text></g>
+            <g transform="translate(70 316)"><circle r="13" fill="#fff" stroke="#FF9F0A" stroke-width="4"/><text x="34" y="6">Утримання</text></g>
+          </g>
+          <text transform="translate(402 226) rotate(90)" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#0A8F4B" letter-spacing="1">клієнт повертається в продажі</text>
+          <g><circle r="10" fill="#17B35F" stroke="#fff" stroke-width="3">
+            <animateMotion dur="9s" repeatCount="indefinite" path="M70 46L70 346L336 346C362 346 372 330 372 308L372 138C372 114 350 106 222 106" calcMode="linear"/>
+          </circle></g>
+        </svg>
       </div>
     </div>
   </div>
@@ -950,7 +968,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
           <div><b><span id="oY">0</span>&nbsp;грн</b><span>економія на рік</span></div>
         </div>
         <div class="co-note">Це приблизно <b id="oF">0</b> повної ставки, яку ви більше не оплачуєте за рутину. Розрахунок орієнтовний і&nbsp;залежить від ваших процесів.</div>
-        <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg> Порахувати точно&nbsp;— безкоштовний аудит</a>
+        <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу безкоштовний аудит моєї операційки." target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg> Порахувати точно&nbsp;— безкоштовний аудит</a>
       </div>
     </div>
   </div>
@@ -976,7 +994,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
           <li>Підключення до вашої таблиці чи CRM</li>
           <li>14&nbsp;днів підтримки після запуску</li>
         </ul>
-        <a class="btn btn-ghost" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">Обговорити в&nbsp;Telegram</a>
+        <a class="btn btn-ghost" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Цікавить тариф «Старт». Хочу безкоштовний аудит." target="_blank" rel="noopener">Обговорити в&nbsp;Telegram</a>
       </div>
       <div class="tier feat rv d1">
         <div class="badge">Найчастіший вибір</div>
@@ -989,7 +1007,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
           <li>До 10 автоматизацій + щоденні звіти</li>
           <li>30&nbsp;днів підтримки та донавчання агентів</li>
         </ul>
-        <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">Обговорити в&nbsp;Telegram</a>
+        <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Цікавить тариф «Бізнес». Хочу безкоштовний аудит." target="_blank" rel="noopener">Обговорити в&nbsp;Telegram</a>
       </div>
       <div class="tier rv d2">
         <div class="tnum">Тариф 03</div>
@@ -1001,7 +1019,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
           <li>Інтеграції з&nbsp;платіжками й&nbsp;вашим стеком</li>
           <li>Супровід і&nbsp;розвиток системи щомісяця</li>
         </ul>
-        <a class="btn btn-ghost" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">Обговорити в&nbsp;Telegram</a>
+        <a class="btn btn-ghost" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Цікавить тариф «Преміум». Розкажіть, що входить і як почати." target="_blank" rel="noopener">Обговорити в&nbsp;Telegram</a>
       </div>
     </div>
     <p class="price-note rv"><b>Ціна фіксується після безкоштовного аудиту.</b> Без продажів «в&nbsp;лоб»&nbsp;— просто розберемо цифри вашої операційки.</p>
@@ -1022,7 +1040,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
       <details class="qa"><summary>Кому належать акаунти та автоматизації?</summary><p>Вам. Збірка працює у&nbsp;вашому середовищі, на ваших акаунтах, а&nbsp;ключі й&nbsp;доступи лишаються у&nbsp;вас&nbsp;— без прив’язки до мене чи чергової підписки.</p></details>
       <details class="qa"><summary>А&nbsp;якщо AI-агент помилиться?</summary><p>Нестандартні й&nbsp;чутливі ситуації агент не вирішує сам, а&nbsp;передає вам&nbsp;— ви бачите їх у&nbsp;позначці «до вас». Усі дії фіксуються, а&nbsp;агентів доналаштовуємо після запуску за результатами реальних діалогів.</p></details>
       <details class="qa"><summary>Мій бізнес не готель і&nbsp;не ресторан&nbsp;— підійде?</summary><p>Так. Пайплайн однаковий для будь-якого бізнесу: маркетинг, продажі, онбординг, доставка, утримання. Готелі, ресторани, клініки, салони, фітнес, нерухомість, автосервіс і&nbsp;оренда&nbsp;— лише приклади, схему адаптуємо під ваш сервіс.</p></details>
-      <details class="qa"><summary>З&nbsp;чого почати?</summary><p>Напишіть у <a href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">Telegram</a> — відповідь за 5&nbsp;хвилин. Далі безкоштовний аудит вашої операційки за 2–3&nbsp;дні з&nbsp;конкретним планом.</p></details>
+      <details class="qa"><summary>З&nbsp;чого почати?</summary><p>Напишіть у <a href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу безкоштовний аудит моєї операційки." target="_blank" rel="noopener">Telegram</a> — відповідь за 5&nbsp;хвилин. Далі безкоштовний аудит вашої операційки за 2–3&nbsp;дні з&nbsp;конкретним планом.</p></details>
     </div>
   </div>
 </section>
@@ -1046,7 +1064,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
       <h2>Привіт, я&nbsp;Юрій.<br><span class="nw">Будую AI-системи замість рутини.</span></h2>
       <p>Я&nbsp;автоматизую бізнес-процеси та створюю AI-агентів для малого й&nbsp;середнього бізнесу. Фінансова освіта допомагає бачити бізнес через цифри: спершу рахую, де ви втрачаєте гроші, і&nbsp;лише потім автоматизую. Система, яку я&nbsp;збираю, лишається вашою.</p>
       <div class="chips"><span class="chip">AI-автоматизація бізнес-процесів</span><span class="chip">AI-відео: генерація та монтаж</span></div>
-      <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg> Написати мені в&nbsp;Telegram</a>
+      <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу обговорити автоматизацію бізнесу." target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg> Написати мені в&nbsp;Telegram</a>
     </div>
   </div>
   <dialog class="cert-dlg" id="certDlg" aria-label="Диплом «AI Спеціаліст»">
@@ -1062,7 +1080,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
     <h2 class="rv d1"><span class="nowrap">Зберіть один раз.</span> Володійте. <span style="color:var(--atx)">Масштабуйтесь.</span></h2>
     <p class="rv d2">Напишіть у&nbsp;Telegram&nbsp;— за 5&nbsp;хвилин отримаєте першу відповідь, за 2–3&nbsp;дні&nbsp;— безкоштовний аудит вашої операційки з&nbsp;конкретним планом.</p>
     <div class="rv d3">
-      <a class="btn btn-amber" style="padding:16px 34px;font-size:16px" href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">
+      <a class="btn btn-amber" style="padding:16px 34px;font-size:16px" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу обговорити автоматизацію бізнесу." target="_blank" rel="noopener">
         <svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240" style="width:22px;height:22px"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg>
         <span>Написати <span translate="no">@AI_EXPERT_UA</span></span>
       </a>
@@ -1094,7 +1112,7 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
       </div>
       <div class="f-col">
         <h3>Почати</h3>
-        <a href="https://t.me/AI_EXPERT_UA" target="_blank" rel="noopener">Telegram →</a>
+        <a href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу обговорити автоматизацію бізнесу." target="_blank" rel="noopener">Telegram →</a>
         <a href="#pricing">Тарифи</a>
         <a href="#cases">Чому це працює</a>
       </div>
@@ -1545,10 +1563,12 @@ pop.innerHTML = '<div class="tp-label">Telegram</div>'
   + '<button type="button" class="tp-copy" aria-label="Скопіювати посилання" title="Скопіювати посилання">'
   + '<svg class="i-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 0 1 7.5 4H15"/></svg>'
   + '<svg class="i-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></div>'
+  + '<div class="tp-draft" hidden><div class="tp-draft-l">Повідомлення в чаті</div><p class="tp-draft-t"></p></div>'
   + '<div class="tp-msg" aria-live="polite"></div>'
   + '<a class="btn btn-amber tp-open" href="'+TG_URL+'" target="_blank" rel="noopener">Відкрити Telegram →</a>';
 document.body.appendChild(pop);
 const tpCopy = pop.querySelector('.tp-copy'), tpMsg = pop.querySelector('.tp-msg'), tpOpen = pop.querySelector('.tp-open');
+const tpDraft = pop.querySelector('.tp-draft'), tpDraftT = pop.querySelector('.tp-draft-t');
 let popFor = null, copyTimer;
 function resetCopy(){ clearTimeout(copyTimer); tpCopy.classList.remove('done'); tpMsg.textContent = ''; tpMsg.classList.remove('err'); }
 function placePop(){
@@ -1563,7 +1583,12 @@ function placePop(){
 }
 function openPop(btn){
   if(typeof closeSvc === 'function') closeSvc();
-  popFor = btn; resetCopy(); pop.hidden = false; pop.classList.remove('show'); placePop();
+  popFor = btn; resetCopy();
+  // each button can carry its own ready message: it shows in the popover and is prefilled in the Telegram chat
+  const draft = btn.dataset.tgText || '';
+  tpDraft.hidden = !draft; tpDraftT.textContent = draft;
+  tpOpen.href = draft ? TG_URL + '?text=' + encodeURIComponent(draft) : TG_URL;
+  pop.hidden = false; pop.classList.remove('show'); placePop();
   requestAnimationFrame(()=>pop.classList.add('show'));
   tpOpen.focus({preventScroll:true});
 }
@@ -1718,6 +1743,14 @@ document.querySelector('.svc-in').addEventListener('scroll', followSvc, {passive
 // ===== FEATURE:outline-headings END =====
 
 </script>
+<!-- FEATURE:hero-journey-js START -->
+<script>
+(function(){
+  const svg = document.querySelector('.hp-svg');
+  if(svg && svg.pauseAnimations && matchMedia('(prefers-reduced-motion: reduce)').matches){ svg.pauseAnimations(); svg.setCurrentTime(4.5); }
+})();
+</script>
+<!-- FEATURE:hero-journey-js END -->
 <!-- FEATURE:livechat START — онлайн-чат SendPulse (сторонній скрипт; вирізати разом із цим рядком-маркером) -->
 <script src="https://cdn.pulse.is/livechat/loader.js" data-live-chat-id="6adc4037a6b1f0fac50c3c47" async></script>
 <!-- FEATURE:livechat END -->
