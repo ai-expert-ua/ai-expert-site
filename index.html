@@ -803,6 +803,15 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
 .case-fig{margin:0 0 16px}
 .case-fig img{display:block;width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);background:#fff}
 .case-fig figcaption{font-size:13px;color:var(--dim);margin-top:6px}
+
+/* ===== FEATURE:about-timeline START — шлях 2019 → 2023 → зараз у «Про мене» ===== */
+.about-tl{list-style:none;margin:20px 0 22px;padding:0 0 0 18px;border-left:2px solid rgba(255,159,10,.45);display:grid;gap:12px;max-width:65ch}
+.about-tl li{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:baseline;font-size:15px;line-height:1.5;color:var(--muted)}
+.about-tl li::before{content:"";position:absolute;left:-25px;top:.45em;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #FF9F0A}
+.about-tl b{font-family:var(--display);font-size:15px;font-weight:700;color:var(--atx)}
+.about-tl b{white-space:nowrap}
+@media(max-width:420px){.about-tl li{grid-template-columns:62px minmax(0,1fr);gap:10px}.about-tl b{font-size:14px}}
+/* ===== FEATURE:about-timeline END ===== */
 </style>
 </head>
 <body id="top">
@@ -1260,7 +1269,12 @@ html{scroll-padding-top:calc(var(--nav-h,65px) + var(--strip-h,52px) + 8px)}
     <div class="about-txt rv d1">
       <div class="eyebrow">Хто за цим стоїть</div>
       <h2>Привіт, я&nbsp;Юрій.<br><span class="nw">Будую AI-системи замість рутини.</span></h2>
-      <p>З&nbsp;2023&nbsp;року я&nbsp;автоматизую бізнес-процеси та створюю AI-агентів для малого й&nbsp;середнього бізнесу. Фінансова освіта допомагає бачити бізнес через цифри: спершу рахую, де ви втрачаєте гроші, і&nbsp;лише потім автоматизую. Працюю самостійно: від першої розмови до запуску й&nbsp;підтримки. Система, яку я&nbsp;збираю, лишається вашою.</p>
+      <p>Автоматизацію бізнес-процесів вивчаю з&nbsp;2019 року, ще до того, як AI став доступним. З&nbsp;2023-го працюю з&nbsp;<span translate="no">ChatGPT</span>, а&nbsp;згодом і&nbsp;з&nbsp;<span translate="no">Claude</span> та <span translate="no">Gemini</span>: будую на них рішення для малого й&nbsp;середнього бізнесу, а&nbsp;<span translate="no">Claude Code</span> допомагає швидше писати й&nbsp;перевіряти код. Фінансова освіта допомагає бачити бізнес через цифри: спершу аналізую цифри й&nbsp;рахую, де ви втрачаєте гроші, і&nbsp;лише потім автоматизую. Працюю самостійно: від першої розмови до запуску й&nbsp;підтримки. Система, яку я&nbsp;збираю, лишається вашою.</p>
+      <ol class="about-tl" aria-label="Мій шлях">
+        <li><b>2019</b><span>почав вивчати автоматизацію бізнес-процесів, ще без&nbsp;AI</span></li>
+        <li><b>2023</b><span>почав працювати з&nbsp;<span translate="no">ChatGPT</span> і&nbsp;додавати AI в&nbsp;автоматизацію</span></li>
+        <li><b>Зараз</b><span><span translate="no">ChatGPT, Claude, Claude Code</span> і&nbsp;<span translate="no">Gemini</span>: AI-агенти, чат-боти й&nbsp;системи для бізнесу під ключ</span></li>
+      </ol>
       <div class="chips"><span class="chip">AI-автоматизація бізнес-процесів</span><span class="chip">AI-агенти</span><span class="chip">Асистенти за&nbsp;знаннями</span></div>
       <a class="btn btn-amber" href="https://t.me/AI_EXPERT_UA" data-tg-text="Привіт! Хочу обговорити автоматизацію бізнесу." target="_blank" rel="noopener"><svg class="tg-ic" aria-hidden="true" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#2AABEE"/><path fill="#fff" d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3s.4 3.1.2 4.7c-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z"/></svg> Написати мені в&nbsp;Telegram</a>
     </div>
